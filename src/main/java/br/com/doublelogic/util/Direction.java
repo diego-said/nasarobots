@@ -15,6 +15,14 @@ public enum Direction {
         this.symbol = symbol;
     }
 
+    public static Direction getDirection(String symbol) {
+        for(Direction d : values()) {
+            if(d.toString().equalsIgnoreCase(symbol))
+                return d;
+        }
+        return null;
+    }
+
     public static Direction rotateLeft(Direction d) {
         switch (d) {
             case NORTH:

@@ -20,7 +20,7 @@ public class DirectionTest {
 
     @Before
     public void cleanData() {
-        pos = new Position(0 ,0);
+        pos = new Position(1 ,1);
     }
 
     @Test
@@ -36,29 +36,29 @@ public class DirectionTest {
     @Test
     public void testMoveNorth() {
         NORTH.move(pos);
-        assertEquals(0, pos.getX());
-        assertEquals(1, pos.getY());
+        assertEquals(1, pos.getX());
+        assertEquals(2, pos.getY());
     }
 
     @Test
     public void testMoveSouth() {
         SOUTH.move(pos);
-        assertEquals(0, pos.getX());
-        assertEquals(-1, pos.getY());
+        assertEquals(1, pos.getX());
+        assertEquals(0, pos.getY());
     }
 
     @Test
     public void testMoveWest() {
         WEST.move(pos);
-        assertEquals(-1, pos.getX());
-        assertEquals(0, pos.getY());
+        assertEquals(0, pos.getX());
+        assertEquals(1, pos.getY());
     }
 
     @Test
     public void testMoveEast() {
         EAST.move(pos);
-        assertEquals(1, pos.getX());
-        assertEquals(0, pos.getY());
+        assertEquals(2, pos.getX());
+        assertEquals(1, pos.getY());
     }
 
 }
